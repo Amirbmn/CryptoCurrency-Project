@@ -1,0 +1,40 @@
+simulation:
+  students: 100
+  selected: 20
+  sessions: 40
+  seed: 20260722
+  low_profile_ratio: 0.30
+  low_online_probability: 0.40
+  high_online_probability: 0.90
+  gaussian_sigma: 0.10
+  malicious_ratio: 0.20
+
+selection:
+  greedy_ratio: 0.60
+  beta1: 0.50
+  beta2: 0.50
+
+state:
+  alpha1: 0.40
+  alpha2: 0.30
+  alpha3: 0.30
+  epsilon_max: 0.30
+  eta: 0.10
+  fixed_point_scale: 1000
+
+federated_learning:
+  input_size: 3
+  hidden_size: 8
+  local_epochs: 2
+  learning_rate: 0.50
+  test_size: 1200
+
+zkp:
+  backend: groth16
+  wasm_path: artifacts/zkp/readiness_js/readiness.wasm
+  zkey_path: artifacts/zkp/readiness_final.zkey
+  verification_key_path: artifacts/zkp/verification_key.json
+
+storage:
+  output_dir: output
+  ipfs_dir: output/ipfs
